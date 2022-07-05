@@ -1,0 +1,317 @@
+<div class="row-layout group">
+  <div class="row-layout group_1">
+    <div class="column-layout group_2">
+      <div class="row-layout group_3">
+        <img src="/assets/LogoHR.svg" class="image" />
+        <p class="igx-typography__subtitle-2 text">
+          HR
+        </p>
+        <p class="igx-typography__subtitle-2 text_1">
+          CORP
+        </p>
+      </div>
+      <div class="group_4"></div>
+      <div *ngIf="groupVisible" class="column-layout group_5">
+        <button igxButton="flat" igxRipple class="button">
+          <igx-icon>
+            dashboard
+          </igx-icon>
+          <span>DASHBOARD</span>
+        </button>
+        <button igxButton="flat" igxRipple class="button_1">
+          <igx-icon>
+            people
+          </igx-icon>
+          <span>COWORKERS</span>
+        </button>
+        <button igxButton="flat" igxRipple class="button_1">
+          <igx-icon>
+            stars
+          </igx-icon>
+          <span>EVENTS</span>
+        </button>
+        <button igxButton="flat" igxRipple class="button_2">
+          <igx-icon>
+            settings
+          </igx-icon>
+          <span>SETTINGS</span>
+        </button>
+      </div>
+      <div class="column-layout group_6">
+        <igx-avatar src="/assets/Avatar-1.svg" size="large" [roundShape]="true" class="avatar"></igx-avatar>
+        <p class="igx-typography__subtitle-2 text_2">
+          Sandy Anderson
+        </p>
+        <p class="igx-typography__caption text_3">
+          UX DESIGNER
+        </p>
+      </div>
+      <igx-list class="list">
+        <igx-list-item [isHeader]="false" class="list-item">
+          <span igxListThumbnail>
+            <igx-avatar icon="dashboard" [roundShape]="true" class="avatar_1"></igx-avatar>
+          </span>
+          <span igxListLine>
+            <p class="igx-typography__subtitle-2 text_4">
+              DASHBOARD
+            </p>
+          </span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" class="list-item">
+          <span igxListThumbnail>
+            <igx-avatar icon="people" [roundShape]="true" class="avatar_2"></igx-avatar>
+          </span>
+          <span igxListLine>
+            <p class="igx-typography__subtitle-2 text_5">
+              COWORKERS
+            </p>
+          </span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" class="list-item">
+          <span igxListThumbnail>
+            <igx-avatar icon="stars" [roundShape]="true" class="avatar_2"></igx-avatar>
+          </span>
+          <span igxListLine>
+            <p class="igx-typography__subtitle-2 text_5">
+              EVENTS
+            </p>
+          </span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false">
+          <span igxListThumbnail>
+            <igx-avatar icon="settings" [roundShape]="true" class="avatar_2"></igx-avatar>
+          </span>
+          <span igxListLine>
+            <p class="igx-typography__subtitle-2 text_5">
+              SETTINGS
+            </p>
+          </span>
+        </igx-list-item>
+      </igx-list>
+    </div>
+  </div>
+  <div class="row-layout group_7">
+    <div class="column-layout group_8">
+      <h5 class="h5">
+        Good Morning, Sandy!
+      </h5>
+      <p class="text_6">
+        Your Highlights
+      </p>
+      <div class="row-layout group_9">
+        <igx-card type="outlined" class="card">
+          <igx-card-media height="200px">
+            <img src="/assets/Illustration1.svg" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+              Team Stats
+            </h3>
+            <h5 igxCardHeaderSubtitle>
+              2010-2022
+            </h5>
+          </igx-card-header>
+        </igx-card>
+        <igx-card type="outlined" class="card">
+          <igx-card-media height="200px">
+            <img src="/assets/Illustration2.svg" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+              Ideation Workshop
+            </h3>
+            <h5 igxCardHeaderSubtitle>
+              View Proposals
+            </h5>
+          </igx-card-header>
+        </igx-card>
+        <igx-card type="outlined" class="card_1">
+          <igx-card-media height="200px">
+            <img src="/assets/Illustration3.svg" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+              Upcoming Training
+            </h3>
+            <h5 igxCardHeaderSubtitle>
+              July 2022
+            </h5>
+          </igx-card-header>
+        </igx-card>
+      </div>
+      <div class="row-layout group">
+        <div class="column-layout group_10">
+          <h6 class="h6">
+            Current Team Members
+          </h6>
+          <igx-grid [data]="dashboardDataGrid" primaryKey="First Name" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+            <igx-column header="First Name" field="First Name" dataType="string" [sortable]="true" title="First Name"></igx-column>
+            <igx-column header="Last Name" field="Last Name" dataType="string" [sortable]="true" title="Last Name"></igx-column>
+            <igx-column header="Hire Date" field="Hire Date" dataType="string" [sortable]="true" title="Hire Date"></igx-column>
+            <igx-column header="ID" field="ID" dataType="number" [sortable]="true" title="ID"></igx-column>
+          </igx-grid>
+        </div>
+        <div class="column-layout group_11">
+          <h6 class="h6">
+            Team Growth
+          </h6>
+          <igx-category-chart [dataSource]="dashboardDataChart" chartType="area" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+        </div>
+      </div>
+    </div>
+    <div class="column-layout group_12">
+      <div class="column-layout group_13">
+        <div class="row-layout group_14">
+          <h6 class="content">
+            Calendar
+          </h6>
+          <button igxButton="icon" igxRipple class="button_3">
+            <igx-icon>
+              notifications
+            </igx-icon>
+          </button>
+        </div>
+        <igx-list class="list">
+          <igx-list-item [isHeader]="true">July 1st</igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListLine>
+              <div class="row-layout group_15">
+                <p class="igx-typography__subtitle-1 text_7">
+                  10 AM
+                </p>
+                <div class="column-layout group_16">
+                  <p class="igx-typography__overline text_3">
+                    TRAINING
+                  </p>
+                  <p class="igx-typography__subtitle-2 content">
+                    Intro to Scrum
+                  </p>
+                </div>
+              </div>
+            </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListLine>
+              <div class="row-layout group_15">
+                <p class="igx-typography__subtitle-1 text_7">
+                  12 PM
+                </p>
+                <div class="column-layout group_17">
+                  <p class="igx-typography__overline text_3">
+                    OFFICE HOURS
+                  </p>
+                  <p class="igx-typography__subtitle-2 content">
+                    Customers Q&amp;A
+                  </p>
+                </div>
+              </div>
+            </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="true" class="list-item_1">July 5th</igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListLine>
+              <div class="row-layout group_15">
+                <p class="igx-typography__subtitle-1 text_7">
+                  10 AM
+                </p>
+                <div class="column-layout group_18">
+                  <p class="igx-typography__overline text_3">
+                    HR CORP
+                  </p>
+                  <p class="igx-typography__subtitle-2 content">
+                    Company Meeting
+                  </p>
+                </div>
+              </div>
+            </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListLine>
+              <div class="row-layout group_15">
+                <p class="igx-typography__subtitle-1 text_7">
+                  12 PM
+                </p>
+                <div class="column-layout group_19">
+                  <p class="igx-typography__overline text_3">
+                    TRAINING
+                  </p>
+                  <p class="igx-typography__subtitle-2 content">
+                    Managing People
+                  </p>
+                </div>
+              </div>
+            </span>
+          </igx-list-item>
+        </igx-list>
+      </div>
+      <div class="column-layout group_20">
+        <h6 class="h6_1">
+          New Team Members
+        </h6>
+        <igx-list class="list">
+          <igx-list-item [isHeader]="false">
+            <span igxListLine>
+              <div class="row-layout group_15">
+                <igx-avatar src="/assets/Avatar-2.svg" [roundShape]="true"></igx-avatar>
+                <div class="column-layout group_21">
+                  <p class="igx-typography__subtitle-2 content">
+                    Kate Lorenz
+                  </p>
+                  <p class="igx-typography__overline text_3">
+                    PRODUCT MANAGER
+                  </p>
+                </div>
+              </div>
+            </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListLine>
+              <div class="row-layout group_15">
+                <igx-avatar src="/assets/Avatar-3.svg" [roundShape]="true"></igx-avatar>
+                <div class="column-layout group_21">
+                  <p class="igx-typography__subtitle-2 content">
+                    Anthony Murray
+                  </p>
+                  <p class="igx-typography__overline text_3">
+                    SALES ASSOCIATE
+                  </p>
+                </div>
+              </div>
+            </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListLine>
+              <div class="row-layout group_15">
+                <igx-avatar src="/assets/Avatar-4.svg" [roundShape]="true"></igx-avatar>
+                <div class="column-layout group_21">
+                  <p class="igx-typography__subtitle-2 content">
+                    Tatiana Rivers
+                  </p>
+                  <p class="igx-typography__overline text_3">
+                    VISUAL DESIGNER
+                  </p>
+                </div>
+              </div>
+            </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListLine>
+              <div class="row-layout group_15">
+                <igx-avatar src="/assets/Avatar-5.svg" [roundShape]="true"></igx-avatar>
+                <div class="column-layout group_21">
+                  <p class="igx-typography__subtitle-2 content">
+                    Thomas Scott
+                  </p>
+                  <p class="igx-typography__overline text_3">
+                    DEVELOPER
+                  </p>
+                </div>
+              </div>
+            </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false"></igx-list-item>
+        </igx-list>
+      </div>
+    </div>
+  </div>
+</div>

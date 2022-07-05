@@ -1,0 +1,101 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  width: 240px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_1 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 40px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_2 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.row-layout {
+  display: flex;
+}
+.group_3 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.card {
+  width: 320px;
+  height: max-content;
+  min-width: 320px;
+  flex-shrink: 0;
+}
+.card_1 {
+  margin: 0 16px;
+  width: 320px;
+  height: max-content;
+  min-width: 320px;
+  flex-shrink: 0;
+}
+.group_4 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px;
+  width: 280px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.content {
+  height: max-content;
+  min-width: min-content;
+}
+.h5 {
+  margin: 0 0 20px;
+  height: max-content;
+  min-width: min-content;
+}
+.grid {
+  min-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.category-chart {
+  --x-axis-label-text-style: normal 400 14px Lato;
+  --y-axis-label-text-style: normal 400 14px Lato;
+  --x-axis-title-text-style: normal 400 14px Lato;
+  --y-axis-title-text-style: normal 400 14px Lato;
+  --title-text-style: normal 600 20px Lato;
+  min-width: 400px;
+  min-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
